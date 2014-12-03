@@ -1,0 +1,20 @@
+<article>
+  <header>
+    <h1 data-ng-bind="vm.text.header.title"></h1>
+    <p data-ng-bind="vm.text.header.text"></p>
+  </header>
+  <section data-ng-repeat="section in vm.text.sections">
+    <h2 data-ng-bind="section.title"></h2>
+    <p data-ng-bind="section.text"></p>
+  </section>
+  <footer>
+    <h3 data-ng-bind="vm.text.footer.title"></h3>
+    <p data-ng-bind="vm.text.footer.text"></p>
+  </footer>
+</article>
+
+<aside>
+  <h3 data-ng-bind="vm.text.aside.title"></h3>
+  <p data-ng-bind="vm.text.aside.text"></p>
+</aside>
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+      <!--[if gt IE 8]><!--> <html class="no-js" data-ng-app="app" data-ng-controller="App as vm" ng-strict-di> <!--<![endif]-->
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+          <title></title>
+          <meta name="description" content="">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+
+          <link rel="stylesheet" href="css/normalize.min.css">
+          <link rel="stylesheet" href="css/main.css">
+
+          <script src="bower_components/angular/angular.js"></script>
+          <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        </head>
+        <body>
+          <!--[if lt IE 7]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+          <![endif]-->
+
+          <div class="header-container">
+            <header class="wrapper clearfix">
+            <h1 class="title" data-ng-bind="vm.text.title"></h1>
+            <nav>
+            <ul>
+              <li data-ng-repeat="link in vm.text.nav"><a href={{link.href}} data-ng-bind="link.name"></a></li>
+            </ul>
+            </nav>
+            </header>
+          </div>
+
+          <div class="main-container">
+            <div class="main wrapper clearfix" ui-view>
+            </div> <!-- #main -->
+          </div> <!-- #main-container -->
+
+          <div class="footer-container">
+            <footer class="wrapper">
+            <h3>footer</h3>
+            </footer>
+          </div>
+
+          <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+          <!--
+          <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+              function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+              e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+              e.src='//www.google-analytics.com/analytics.js';
+              r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+          </script>
+          -->
+
+          <!-- App Bootstrap -->
+          <script src="/app/app.module.js"></script>
+          <script src="/app/app.controller.js"></script>
+          <script src="/app/app.config.router.js"></script>
+          <!-- Core Module -->
+          <script src="/app/core/core.module.js"></script>
+          <!-- Home Module -->
+          <script src="/app/home/home.module.js"></script>
+          <script src="/app/home/home.controller.js"></script>
+          <script src="/app/home/home.config.router.js"></script>
+          <!-- Contact Module -->
+          <script src="/app/contact/contact.module.js"></script>
+          <script src="/app/contact/contact.controller.js"></script>
+          <script src="/app/contact/contact.config.router.js"></script>
+        </body>
+      </html>
